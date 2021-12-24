@@ -20,6 +20,7 @@ Y값 = 0
 Y값 = 4
 led.plot(X값, Y값)
 basic.forever(function () {
+    led.setBrightness(255)
     가속도_센서_Y = input.rotation(Rotation.Pitch)
     if (가속도_센서_Y < -10) {
         basic.clearScreen()
@@ -32,5 +33,6 @@ basic.forever(function () {
             Y값 = Y값 + 1
         }
     }
+    basic.pause(700)
     led.plot(X값, Y값)
 })
