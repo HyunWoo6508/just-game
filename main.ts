@@ -25,13 +25,11 @@ basic.forever(function () {
         basic.clearScreen()
         if (Y값 > 0) {
             Y값 = Y값 - 1
-            basic.pause(1000)
         }
     } else if (가속도_센서_Y > 10) {
         basic.clearScreen()
         if (Y값 < 4) {
             Y값 = Y값 + 1
-            basic.pause(500)
         }
     }
     led.plot(X값, Y값)
